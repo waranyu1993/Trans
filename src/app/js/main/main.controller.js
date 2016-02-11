@@ -2,8 +2,8 @@
 	'use strict';
 
 	angular
-	.module('main.controller', [])
-	.controller('MainController', MainController);
+		.module('main.controller', [])
+		.controller('MainController', MainController);
 
 	/** @ngInject */
 	MainController.$inject = ['$scope', '$timeout', 'webDevTec', 'toastr', '$http', '$log', 'VideosService'];
