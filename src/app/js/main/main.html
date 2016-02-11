@@ -1,0 +1,104 @@
+<div data-ng-controller="MainController">
+	<header>
+		<h1>Maliwan</h1>
+		<!-- <form id="search" data-ng-submit="search()">
+		<input id="query" name="q" type="text" placeholder="Search for a YouTube video" data-ng-model="query">
+		<input id="submit" type="image" src="assets/images/search.png" alt="Search">
+		</form> -->
+		<!-- <nav>
+		<a id="play">{{ youtube.state }}</a>
+		<a id="pause">Pause</a>
+		</nav> -->
+	</header>
+	<div id="results">
+		<div class="tabbable tabs-left">
+			<ul class="nav nav-tabs">
+				<li ng-class="getTabClass(1)" ng-click="setActiveTab(1)">
+					<a href="#home" data-toggle="tab">Home</a>
+				</li>
+				<li ng-class="getTabClass(2)" ng-click="setActiveTab(2)">
+					<a href="#course" data-toggle="tab">Course</a>
+				</li>
+				<li ng-class="getTabClass(3)" ng-click="setActiveTab(3)">
+					<a href="#lessenonline" data-toggle="tab">Lessen Online</a>
+				</li>
+				<li ng-class="getTabClass(4)" ng-click="setActiveTab(4)">
+					<a href="#sitemap" data-toggle="tab">Sitemap</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div ng-class="getTabPaneClass(1)" id="home">
+					<div id="player">
+						<div id="placeholder"></div>
+					</div>
+					<div id="playlist">
+						<p id="current">
+							{{ youtube.videoTitle }}
+						</p>
+						<li data-ng-repeat="video in upcoming">
+							<p class="item-title" data-ng-click="launch(video.id, video.title)">
+								{{video.title}}
+							</p>
+						</li>
+					</div>
+				</div>
+
+				<div ng-class="getTabPaneClass(2)" id="course">
+					<div>
+						<span><b>Courses</b></span>
+									<br><br>
+									<span style="font-size:x-large;background-image:initial;background-repeat:initial"><b>Speaking</b></span>
+									<br><br>
+									<span style="background-image:initial;background-repeat:initial"><b style="font-size:x-large">Level 1 </b><font size="5">G</font><font size="4">eneral
+											conversation and how to construct simple sentences and questions.</font></span><font size="4">
+										<br>
+										<span style="background-image:initial;background-repeat:initial">As an
+											example: ordering food and taking a taxi.</span></font>
+									<br>
+									<span style="font-size:x-large;background-image:initial;background-repeat:initial"><b>Level 2</b> </span><font size="4"><span style="background-image:initial;background-repeat:initial">Learn more general conversation and how to construct simple sentences or
+											questions.</span>
+										<br>
+										<span style="background-image:initial;background-repeat:initial">As an
+											example: talking at the office and at the market.</span></font>
+									<br>
+									<span style="background-image:initial;background-repeat:initial"><b style="font-size:x-large">Level 3 </b><font size="4">Learn practical conversations for different situations.</font></span><font size="4">
+										<br>
+										<span style="background-image:initial;background-repeat:initial">As an
+											example: social events and new year.</span>
+										<br>
+									</font>
+									<br>
+									<span style="font-size:x-large;background-image:initial;background-repeat:initial"><b>Reading</b></span>
+									<br>
+									<font size="4"><span style="background-image:initial;background-repeat:initial">1. Learn
+											all 44 thai consonants and 28vowels</span>
+										<br>
+										<span style="background-image:initial;background-repeat:initial">2. Start
+											to read books.</span></font></span>
+								<br>
+								<br>
+							</font>
+							<br>
+						</span>
+					</div>
+				</div>
+
+				<div ng-class="getTabPaneClass(3)" id="lessononline">
+					{{tab3}}
+				</div>
+
+				<div ng-class="getTabPaneClass(4)" id="stiemap">
+					{{tab4}}
+				</div>
+			</div>
+			<div class="likeface">
+				<div class="fb-like" data-href="https://www.facebook.com/Maliwanthailanguage-953679591371904" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		contact : 0917100326</br>
+		email : maliwanthailanguage@gmail.com</br>
+		facebook : maliwanthailanguage</br>
+	</footer>
+</div>

@@ -1,0 +1,58 @@
+
+<div data-ng-controller="CourseController">
+	<header>
+		<h1>Maliwan</h1>
+		<!-- <form id="search" data-ng-submit="search()">
+			<input id="query" name="q" type="text" placeholder="Search for a YouTube video" data-ng-model="query">
+			<input id="submit" type="image" src="assets/images/search.png" alt="Search">
+		</form> -->
+		<!-- <nav>
+			<a id="play">{{ youtube.state }}</a>
+			<a id="pause">Pause</a>
+		</nav> -->
+	</header>
+	<div id="results">
+    <div class="video">
+      <div class="fb-like" data-href="https://www.facebook.com/Maliwanthailanguage-953679591371904" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+			<div id="fb-root"></div>
+    </div>
+    <div class="tabbable tabs-left">
+      <ul class="nav nav-tabs">
+         <li ng-class="getTabClass(1)" ng-click="setActiveTab(1)"><a href="#home" data-toggle="tab">Home</a></li>
+         <li ng-class="getTabClass(2)" ng-click="setActiveTab(2)"><a href="#course" data-toggle="tab">Course</a></li>
+         <li ng-class="getTabClass(3)" ng-click="setActiveTab(3)"><a href="#lessenonline" data-toggle="tab">Lessen Online</a></li>
+         <li ng-class="getTabClass(4)" ng-click="setActiveTab(4)"><a href="#sitemap" data-toggle="tab">Sitemap</a></li>
+      </ul>
+      <div class="tab-content">
+        <div ng-class="getTabPaneClass(1)" id="home">    
+            {{tab1}}
+         </div>       
+        
+        <div ng-class="getTabPaneClass(2)" id="course">     
+          {{tab2}}
+        </div>
+        
+        <div ng-class="getTabPaneClass(3)" id="lessononline">     
+          {{tab3}}
+        </div>
+        
+        <div ng-class="getTabPaneClass(4)" id="stiemap">     
+          {{tab4}}
+        </div>      
+      
+      </div>
+  </div>
+	<div id="player">
+		<div id="placeholder"></div>
+	</div>
+	<div id="playlist">
+		<p id="current">
+			{{ youtube.videoTitle }}
+		</p>
+		<li data-ng-repeat="video in upcoming">
+			<p class="item-title" data-ng-click="launch(video.id, video.title)">
+				{{video.title}}
+			</p>
+		</li>
+	</div>
+</div>
